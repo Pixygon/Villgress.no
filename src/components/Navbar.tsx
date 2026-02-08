@@ -34,13 +34,16 @@ export default function Navbar() {
   return (
     <AppBar
       position="sticky"
+      elevation={0}
       sx={{
-        backgroundColor: 'rgba(10,10,10,0.95)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(196,30,30,0.3)',
+        backgroundColor: 'rgba(10,10,10,0.85)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(196,30,30,0.2)',
+        transition: 'all 0.3s ease',
       }}
     >
-      <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1200, width: '100%', mx: 'auto' }}>
+      <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1200, width: '100%', mx: 'auto', py: 0.5 }}>
         <Typography
           component={Link}
           to="/"
@@ -49,8 +52,13 @@ export default function Navbar() {
             fontFamily: '"Oswald", sans-serif',
             fontWeight: 700,
             color: '#fff',
-            letterSpacing: '0.1em',
+            letterSpacing: '0.15em',
             textDecoration: 'none',
+            textShadow: '0 0 20px rgba(196,30,30,0.3)',
+            transition: 'text-shadow 0.3s ease',
+            '&:hover': {
+              textShadow: '0 0 30px rgba(196,30,30,0.5)',
+            },
           }}
         >
           VILLGRESS
@@ -67,7 +75,8 @@ export default function Navbar() {
               onClose={() => setDrawerOpen(false)}
               PaperProps={{
                 sx: {
-                  backgroundColor: '#0a0a0a',
+                  backgroundColor: 'rgba(10,10,10,0.98)',
+                  backdropFilter: 'blur(20px)',
                   width: 280,
                   borderLeft: '1px solid rgba(196,30,30,0.3)',
                 },
@@ -88,6 +97,10 @@ export default function Navbar() {
                       sx={{
                         color: location.pathname === link.path ? theme.palette.primary.main : '#fff',
                         borderLeft: location.pathname === link.path ? `3px solid ${theme.palette.primary.main}` : '3px solid transparent',
+                        transition: 'all 0.2s ease',
+                        '&:hover': {
+                          backgroundColor: 'rgba(196,30,30,0.1)',
+                        },
                       }}
                     >
                       <ListItemText
@@ -107,7 +120,7 @@ export default function Navbar() {
             </Drawer>
           </>
         ) : (
-          <Box sx={{ display: 'flex', gap: 1 }}>
+          <Box sx={{ display: 'flex', gap: 0.5 }}>
             {navLinks.map((link) => (
               <Typography
                 key={link.path}
@@ -116,17 +129,19 @@ export default function Navbar() {
                 sx={{
                   fontFamily: '"Oswald", sans-serif',
                   fontWeight: 500,
-                  fontSize: '1rem',
+                  fontSize: '0.95rem',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  color: location.pathname === link.path ? theme.palette.primary.main : '#fff',
+                  letterSpacing: '0.08em',
+                  color: location.pathname === link.path ? theme.palette.primary.main : 'rgba(255,255,255,0.85)',
                   textDecoration: 'none',
                   px: 1.5,
                   py: 1,
+                  position: 'relative',
                   borderBottom: location.pathname === link.path ? `2px solid ${theme.palette.primary.main}` : '2px solid transparent',
-                  transition: 'all 0.2s',
+                  transition: 'all 0.3s ease',
                   '&:hover': {
                     color: theme.palette.primary.main,
+                    textShadow: '0 0 15px rgba(196,30,30,0.4)',
                   },
                 }}
               >

@@ -9,8 +9,14 @@ interface SectionTitleProps {
 
 export default function SectionTitle({ title, subtitle, align = 'center' }: SectionTitleProps) {
   return (
-    <Box sx={{ mb: 4, textAlign: align }}>
-      <Typography variant="h2" sx={{ mb: 1 }}>
+    <Box sx={{ mb: 5, textAlign: align }}>
+      <Typography
+        variant="h2"
+        sx={{
+          mb: 1.5,
+          textShadow: '0 0 30px rgba(196,30,30,0.2)',
+        }}
+      >
         {title}
       </Typography>
       <Box
@@ -20,6 +26,8 @@ export default function SectionTitle({ title, subtitle, align = 'center' }: Sect
           backgroundColor: tokens.red.main,
           mx: align === 'center' ? 'auto' : 0,
           mb: 2,
+          borderRadius: 2,
+          boxShadow: '0 0 10px rgba(196,30,30,0.5)',
         }}
       />
       {subtitle && (
