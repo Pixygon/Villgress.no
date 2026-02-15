@@ -67,7 +67,7 @@ export default function Footer() {
               VILLGRESS
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Norsk rock fra Hurdal. Ra, arlig og ekte.
+              Norsk rock fra Hurdal. Rå, årlig og ekte.
             </Typography>
             <Stack direction="row" spacing={0.5}>
               {socialLinks.map((social) => (
@@ -141,11 +141,11 @@ export default function Footer() {
               Nyhetsbrev
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Fa nyheter om konserter og utgivelser rett i innboksen.
+              Få nyheter om konserter og utgivelser rett i innboksen.
             </Typography>
             {subscribed ? (
               <Typography variant="body2" sx={{ color: '#4caf50' }}>
-                Takk for pategningen!
+                Takk for påmeldingen!
               </Typography>
             ) : (
               <Box component="form" onSubmit={handleNewsletterSubmit} sx={{ display: 'flex', gap: 1 }}>
@@ -179,7 +179,7 @@ export default function Footer() {
                     fontSize: '0.8rem',
                   }}
                 >
-                  Meld pa
+                  Meld på
                 </Button>
               </Box>
             )}

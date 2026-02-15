@@ -19,7 +19,7 @@ export default function ContactForm() {
           border: '1px solid rgba(76,175,80,0.3)',
         }}
       >
-        Takk for meldingen! Vi svarer sa fort vi kan.
+        Takk for meldingen! Vi svarer så fort vi kan.
       </Alert>
     )
   }

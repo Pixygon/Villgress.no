@@ -13,7 +13,7 @@ export default function ContactPage() {
     <div ref={scrollRef}>
       <HeroSection
         title="Kontakt"
-        subtitle="Vi horer gjerne fra deg!"
+        subtitle="Vi hører gjerne fra deg!"
         compact
       />
 
@@ -26,8 +26,8 @@ export default function ContactPage() {
               color="text.secondary"
               sx={{ textAlign: 'center', maxWidth: 600, mx: 'auto', mb: 6, lineHeight: 1.8 }}
             >
-              Enten du vil booke bandet til et arrangement, har sporsmol om merch, eller bare vil si hei
-              - ta gjerne kontakt! Vi svarer pa alle henvendelser sa raskt vi kan.
+              Enten du vil booke bandet til et arrangement, har spørsmål om merch, eller bare vil si hei
+              - ta gjerne kontakt! Vi svarer på alle henvendelser så raskt vi kan.
             </Typography>
           </div>
 

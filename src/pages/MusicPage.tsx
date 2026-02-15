@@ -38,7 +38,7 @@ export default function MusicPage() {
           {/* Spotify Embed Placeholder */}
           <Box sx={{ mt: 10 }}>
             <div className="scroll-reveal">
-              <SectionTitle title="Lytt pa Spotify" subtitle="Stream var musikk direkte" />
+              <SectionTitle title="Lytt på Spotify" subtitle="Stream vår musikk direkte" />
             </div>
             <div className="scroll-reveal">
               <Box
@@ -92,7 +92,7 @@ export default function MusicPage() {
                   SPOTIFY-SPILLER
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.3, fontSize: '0.8rem' }}>
-                  Kobles til nar Spotify-konto er klar
+                  Kobles til når Spotify-konto er klar
                 </Typography>
               </Box>
             </div>

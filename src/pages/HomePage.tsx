@@ -15,8 +15,8 @@ export default function HomePage() {
     <div ref={scrollRef}>
       <HeroSection
         title="VILLGRESS"
-        subtitle="Norsk rock fra Hurdal. Ra, arlig og ekte."
-        ctaText="Hor musikken"
+        subtitle="Norsk rock fra Hurdal. Rå, årlig og ekte."
+        ctaText="Hør musikken"
         ctaLink="/musikk"
       />
 

@@ -31,7 +31,7 @@ export default function AboutPage() {
 
           {/* Band Members */}
           <div className="scroll-reveal">
-            <SectionTitle title="Medlemmer" subtitle="De fire som utgjor Villgress" />
+            <SectionTitle title="Medlemmer" subtitle="De fire som utgjør Villgress" />
           </div>
           <Box
             sx={{

@@ -58,7 +58,7 @@ export default function ShowsPage() {
                 Book Villgress
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 3, position: 'relative' }}>
-                Vil du ha oss pa din festival, pub eller arrangement? Vi spiller over hele landet!
+                Vil du ha oss på din festival, pub eller arrangement? Vi spiller over hele landet!
               </Typography>
               <Button
                 component="a"
