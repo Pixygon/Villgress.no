@@ -38,8 +38,8 @@ export default function ShowsPage() {
             <Box
               sx={{
                 textAlign: 'center',
-                py: 6,
-                px: 4,
+                py: { xs: 4, md: 6 },
+                px: { xs: 2.5, md: 4 },
                 mb: 8,
                 backgroundColor: '#141414',
                 borderRadius: 2,

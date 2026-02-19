@@ -90,7 +90,7 @@ export default function NextShowBanner() {
               gap: 3,
               mb: 3,
               p: 2,
-              px: 4,
+              px: { xs: 2.5, sm: 4 },
               borderRadius: 2,
               backgroundColor: 'rgba(196,30,30,0.08)',
               border: '1px solid rgba(196,30,30,0.2)',
@@ -100,7 +100,7 @@ export default function NextShowBanner() {
               <Typography
                 variant="h3"
                 sx={{
-                  fontSize: '2.5rem',
+                  fontSize: { xs: '2rem', md: '2.5rem' },
                   color: '#fff',
                   lineHeight: 1,
                   textShadow: '0 0 20px rgba(196,30,30,0.4)',

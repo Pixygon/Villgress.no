@@ -67,7 +67,7 @@ export default function Footer() {
               VILLGRESS
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Norsk rock fra Hurdal. Rå, årlig og ekte.
+              Norsk rock fra Oslo. Rå, ærlig og ekte.
             </Typography>
             <Stack direction="row" spacing={0.5}>
               {socialLinks.map((social) => (
@@ -130,7 +130,7 @@ export default function Footer() {
                 kontakt@villgress.no
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Hurdal, Norge
+                Oslo, Norge
               </Typography>
             </Stack>
           </Box>
@@ -148,7 +148,7 @@ export default function Footer() {
                 Takk for påmeldingen!
               </Typography>
             ) : (
-              <Box component="form" onSubmit={handleNewsletterSubmit} sx={{ display: 'flex', gap: 1 }}>
+              <Box component="form" onSubmit={handleNewsletterSubmit} sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 1 }}>
                 <TextField
                   placeholder="Din e-post"
                   size="small"

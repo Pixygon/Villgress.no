@@ -59,9 +59,9 @@ export default function ShowCard({ show }: ShowCardProps) {
         ) : show.ticketUrl ? (
           <Button
             variant="contained"
-            size="small"
             href={show.ticketUrl}
             sx={{
+              minHeight: 44,
               boxShadow: '0 0 15px rgba(196,30,30,0.3)',
               '&:hover': {
                 boxShadow: '0 0 25px rgba(196,30,30,0.5)',

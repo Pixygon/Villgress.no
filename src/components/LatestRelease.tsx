@@ -55,7 +55,7 @@ export default function LatestRelease() {
             alignItems: 'center',
           }}
         >
-          {/* Album Art Placeholder */}
+          {/* Album Art */}
           <Box
             sx={{
               width: '100%',
@@ -66,57 +66,60 @@ export default function LatestRelease() {
               border: '1px solid rgba(196,30,30,0.3)',
               boxShadow: '0 0 60px rgba(196,30,30,0.1), 0 20px 60px rgba(0,0,0,0.4)',
               overflow: 'hidden',
-              maxWidth: 450,
+              maxWidth: { xs: '100%', sm: 450 },
               mx: 'auto',
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                inset: 0,
-                background: 'radial-gradient(circle at center, rgba(196,30,30,0.08) 0%, transparent 70%)',
-              },
+              ...(latest.coverImage && {
+                backgroundImage: `url(${latest.coverImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }),
             }}
           >
-            {/* Vinyl record design */}
-            <Box
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '60%',
-                height: '60%',
-                borderRadius: '50%',
-                border: '2px solid rgba(196,30,30,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <Box
-                sx={{
-                  width: '35%',
-                  height: '35%',
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(196,30,30,0.15)',
-                  border: '1px solid rgba(196,30,30,0.3)',
-                }}
-              />
-            </Box>
-            <Typography
-              sx={{
-                position: 'absolute',
-                bottom: 20,
-                left: 20,
-                fontFamily: '"Oswald", sans-serif',
-                fontWeight: 700,
-                fontSize: '1.8rem',
-                color: 'rgba(255,255,255,0.08)',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Villgress
-            </Typography>
+            {!latest.coverImage && (
+              <>
+                {/* Vinyl record design fallback */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '60%',
+                    height: '60%',
+                    borderRadius: '50%',
+                    border: '2px solid rgba(196,30,30,0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: '35%',
+                      height: '35%',
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(196,30,30,0.15)',
+                      border: '1px solid rgba(196,30,30,0.3)',
+                    }}
+                  />
+                </Box>
+                <Typography
+                  sx={{
+                    position: 'absolute',
+                    bottom: 20,
+                    left: 20,
+                    fontFamily: '"Oswald", sans-serif',
+                    fontWeight: 700,
+                    fontSize: '1.8rem',
+                    color: 'rgba(255,255,255,0.08)',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  Villgress
+                </Typography>
+              </>
+            )}
           </Box>
 
           {/* Info */}
@@ -172,7 +175,7 @@ export default function LatestRelease() {
                 </Box>
                 <Box sx={{ flex: 1 }}>
                   <Typography variant="body2" sx={{ fontWeight: 600, color: '#fff' }}>
-                    Hjerteslag
+                    Elvis
                   </Typography>
                   <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
                     Villgress - {latest.title}
@@ -203,7 +206,7 @@ export default function LatestRelease() {
               </Box>
             </Box>
 
-            <Stack direction="row" spacing={2}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               {latest.spotifyUrl && (
                 <Button
                   variant="contained"

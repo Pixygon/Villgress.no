@@ -53,6 +53,7 @@ export default function Navbar() {
             fontWeight: 700,
             color: '#fff',
             letterSpacing: '0.15em',
+            fontSize: { xs: '1.3rem', md: '1.8rem' },
             textDecoration: 'none',
             textShadow: '0 0 20px rgba(196,30,30,0.3)',
             transition: 'text-shadow 0.3s ease',
@@ -108,7 +109,7 @@ export default function Navbar() {
                         primaryTypographyProps={{
                           fontFamily: '"Oswald", sans-serif',
                           fontWeight: 600,
-                          fontSize: '1.2rem',
+                          fontSize: '1.05rem',
                           textTransform: 'uppercase',
                           letterSpacing: '0.05em',
                         }}

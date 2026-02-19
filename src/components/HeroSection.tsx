@@ -152,7 +152,7 @@ export default function HeroSection({ title, subtitle, ctaText, ctaLink, compact
         <Typography
           variant="h1"
           sx={{
-            fontSize: { xs: '3rem', sm: '4.5rem', md: compact ? '4rem' : '6rem' },
+            fontSize: { xs: '2rem', sm: '3.5rem', md: compact ? '4rem' : '6rem' },
             mb: 2,
             textShadow: '0 0 60px rgba(196,30,30,0.5), 0 0 120px rgba(196,30,30,0.2)',
             animation: 'heroTextReveal 1s ease-out forwards',
