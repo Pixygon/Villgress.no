@@ -16,7 +16,7 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-  { icon: HeadphonesIcon, label: 'Spotify', url: '#' },
+  { icon: HeadphonesIcon, label: 'Spotify', url: 'https://open.spotify.com/artist/1d5wLk8vkQzS8Na96Itl8W' },
   { icon: InstagramIcon, label: 'Instagram', url: '#' },
   { icon: FacebookIcon, label: 'Facebook', url: '#' },
   { icon: YouTubeIcon, label: 'YouTube', url: 'https://www.youtube.com/channel/UC6-9VDldrNOSpEFehbwrluw' },
