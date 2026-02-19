@@ -14,6 +14,12 @@ export interface Show {
   isPast: boolean
 }
 
+export interface Track {
+  number: number
+  title: string
+  lyrics?: string
+}
+
 export interface Release {
   id: string
   title: string
@@ -23,6 +29,7 @@ export interface Release {
   spotifyUrl?: string
   appleMusicUrl?: string
   description: string
+  tracks?: Track[]
 }
 
 export const bandMembers: BandMember[] = [
@@ -170,6 +177,19 @@ export const releases: Release[] = [
     coverImage: 'https://pixygontech.b-cdn.net/Projects/Villgress/himmel&helvete.jpg',
     spotifyUrl: 'https://open.spotify.com/album/0ejn8GhOanTKLQIesIRW95',
     description: 'Andre album. Elleve spor med norsk rock som treffer rett i hjertet. Fra den energiske åpningen "Elvis" til den episke avslutningen "Du Og Jeg Og Friheten".',
+    tracks: [
+      { number: 1, title: 'Elvis' },
+      { number: 2, title: 'Hold Meg' },
+      { number: 3, title: 'I Mi Klo' },
+      { number: 4, title: 'Juger' },
+      { number: 5, title: 'Kveld' },
+      { number: 6, title: 'Lykke' },
+      { number: 7, title: 'Rikke' },
+      { number: 8, title: 'Sjelefred' },
+      { number: 9, title: 'Trappa Ned' },
+      { number: 10, title: 'Turboliv' },
+      { number: 11, title: 'Du Og Jeg Og Friheten' },
+    ],
   },
   {
     id: '2',
@@ -179,6 +199,20 @@ export const releases: Release[] = [
     coverImage: 'https://pixygontech.b-cdn.net/Projects/Villgress/en.jpg',
     spotifyUrl: 'https://open.spotify.com/album/5nby6T0myH94nSMHMyZz2a',
     description: 'Debutalbumet. Tolv spor som la grunnlaget for Villgress. Fra "Skinn Og Bein" til "Kom Snart Tilbake" - der det hele startet.',
+    tracks: [
+      { number: 1, title: 'Skinn Og Bein' },
+      { number: 2, title: 'Greit' },
+      { number: 3, title: 'Han Tar Deg' },
+      { number: 4, title: 'Elektrisk' },
+      { number: 5, title: 'Gjennomsvett' },
+      { number: 6, title: 'Svart/Hvitt' },
+      { number: 7, title: 'Den Mørke Siden' },
+      { number: 8, title: 'Konkylie' },
+      { number: 9, title: 'Klovn (Til Hun Som Skjenker Vin)' },
+      { number: 10, title: 'Lett På Tå' },
+      { number: 11, title: 'Kom Deg Vekk' },
+      { number: 12, title: 'Kom Snart Tilbake' },
+    ],
   },
   {
     id: '3',
@@ -188,6 +222,9 @@ export const releases: Release[] = [
     coverImage: '',
     spotifyUrl: 'https://open.spotify.com/album/3T9g5BmHMTN0sUuAZV0Bzs',
     description: 'Singel fra albumet Himmel & Helvete.',
+    tracks: [
+      { number: 1, title: 'Elvis' },
+    ],
   },
 ]
 

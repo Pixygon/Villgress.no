@@ -1,5 +1,6 @@
 import { Card, CardContent, Box, Typography, Button, Stack, Chip } from '@mui/material'
 import type { Release } from '@utils/data'
+import TrackList from '@components/TrackList'
 
 interface ReleaseCardProps {
   release: Release
@@ -98,7 +99,10 @@ export default function ReleaseCard({ release, featured }: ReleaseCardProps) {
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.6 }}>
           {release.description}
         </Typography>
-        <Stack direction="row" spacing={1} flexWrap="wrap">
+        {release.tracks && release.tracks.length > 1 && (
+          <TrackList releaseId={release.id} tracks={release.tracks} />
+        )}
+        <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: release.tracks && release.tracks.length > 1 ? 2 : 0 }}>
           {release.spotifyUrl && (
             <Button
               variant="outlined"
