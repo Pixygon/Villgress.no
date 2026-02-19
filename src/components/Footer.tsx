@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { Link } from 'react-router'
 import { Box, Container, Typography, Stack, IconButton, TextField, Button } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook'
-import InstagramIcon from '@mui/icons-material/Instagram'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import HeadphonesIcon from '@mui/icons-material/Headphones'
+import CloudIcon from '@mui/icons-material/Cloud'
+import AlbumIcon from '@mui/icons-material/Album'
 import { tokens } from '@/theme'
 
 const footerLinks = [
@@ -17,9 +18,10 @@ const footerLinks = [
 
 const socialLinks = [
   { icon: HeadphonesIcon, label: 'Spotify', url: 'https://open.spotify.com/artist/1d5wLk8vkQzS8Na96Itl8W' },
-  { icon: InstagramIcon, label: 'Instagram', url: '#' },
-  { icon: FacebookIcon, label: 'Facebook', url: '#' },
   { icon: YouTubeIcon, label: 'YouTube', url: 'https://www.youtube.com/channel/UC6-9VDldrNOSpEFehbwrluw' },
+  { icon: FacebookIcon, label: 'Facebook', url: 'https://www.facebook.com/Villgress/' },
+  { icon: CloudIcon, label: 'SoundCloud', url: 'https://soundcloud.com/villgress' },
+  { icon: AlbumIcon, label: 'Discogs', url: 'https://www.discogs.com/artist/5123939-Villgress' },
 ]
 
 export default function Footer() {
