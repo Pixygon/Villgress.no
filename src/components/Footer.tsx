@@ -74,6 +74,8 @@ export default function Footer() {
                 <IconButton
                   key={social.label}
                   href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="small"
                   aria-label={social.label}
                   sx={{

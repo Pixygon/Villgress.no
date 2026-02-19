@@ -140,77 +140,34 @@ export default function LatestRelease() {
               {latest.description}
             </Typography>
 
-            {/* Fake streaming embed placeholder */}
-            <Box
-              sx={{
-                backgroundColor: '#141414',
-                borderRadius: 2,
-                border: '1px solid rgba(255,255,255,0.08)',
-                p: 3,
-                mb: 3,
-              }}
-            >
-              <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
-                <Box
-                  sx={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 1,
-                    backgroundColor: 'rgba(196,30,30,0.2)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: 0,
-                      height: 0,
-                      borderLeft: '14px solid rgba(255,255,255,0.7)',
-                      borderTop: '9px solid transparent',
-                      borderBottom: '9px solid transparent',
-                      ml: '3px',
-                    }}
-                  />
-                </Box>
-                <Box sx={{ flex: 1 }}>
-                  <Typography variant="body2" sx={{ fontWeight: 600, color: '#fff' }}>
-                    Elvis
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
-                    Villgress - {latest.title}
-                  </Typography>
-                </Box>
-                <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
-                  3:42
-                </Typography>
-              </Stack>
-              {/* Fake progress bar */}
+            {/* Spotify embed */}
+            {latest.spotifyUrl && (
               <Box
                 sx={{
-                  width: '100%',
-                  height: 3,
-                  backgroundColor: 'rgba(255,255,255,0.1)',
                   borderRadius: 2,
                   overflow: 'hidden',
+                  mb: 3,
                 }}
               >
-                <Box
-                  sx={{
-                    width: '35%',
-                    height: '100%',
-                    backgroundColor: tokens.red.main,
-                    borderRadius: 2,
-                  }}
+                <iframe
+                  src={latest.spotifyUrl.replace('open.spotify.com/', 'open.spotify.com/embed/') + '?utm_source=generator&theme=0'}
+                  width="100%"
+                  height={152}
+                  frameBorder={0}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  style={{ display: 'block' }}
                 />
               </Box>
-            </Box>
+            )}
 
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               {latest.spotifyUrl && (
                 <Button
                   variant="contained"
                   href={latest.spotifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     backgroundColor: '#1DB954',
                     '&:hover': { backgroundColor: '#1aa34a' },
@@ -225,6 +182,8 @@ export default function LatestRelease() {
                 <Button
                   variant="outlined"
                   href={latest.appleMusicUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     borderColor: 'rgba(255,255,255,0.3)',
                     color: '#fff',

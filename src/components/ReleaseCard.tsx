@@ -104,6 +104,8 @@ export default function ReleaseCard({ release, featured }: ReleaseCardProps) {
               variant="outlined"
               size="small"
               href={release.spotifyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 borderColor: 'rgba(255,255,255,0.2)',
                 color: 'rgba(255,255,255,0.8)',
@@ -123,6 +125,8 @@ export default function ReleaseCard({ release, featured }: ReleaseCardProps) {
               variant="outlined"
               size="small"
               href={release.appleMusicUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 borderColor: 'rgba(255,255,255,0.2)',
                 color: 'rgba(255,255,255,0.8)',
