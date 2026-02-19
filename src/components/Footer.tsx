@@ -19,7 +19,7 @@ const socialLinks = [
   { icon: HeadphonesIcon, label: 'Spotify', url: '#' },
   { icon: InstagramIcon, label: 'Instagram', url: '#' },
   { icon: FacebookIcon, label: 'Facebook', url: '#' },
-  { icon: YouTubeIcon, label: 'YouTube', url: '#' },
+  { icon: YouTubeIcon, label: 'YouTube', url: 'https://www.youtube.com/channel/UC6-9VDldrNOSpEFehbwrluw' },
 ]
 
 export default function Footer() {

@@ -2,7 +2,8 @@ import { Box, Container } from '@mui/material'
 import HeroSection from '@components/HeroSection'
 import SectionTitle from '@components/SectionTitle'
 import ReleaseCard from '@components/ReleaseCard'
-import { releases } from '@utils/data'
+import VideoCard from '@components/VideoCard'
+import { releases, videos } from '@utils/data'
 import { useScrollReveal } from '@hooks/useScrollReveal'
 
 export default function MusicPage() {
@@ -33,6 +34,30 @@ export default function MusicPage() {
                 <ReleaseCard release={release} />
               </div>
             ))}
+          </Box>
+
+          {/* Videos */}
+          <Box sx={{ mt: 10 }}>
+            <div className="scroll-reveal">
+              <SectionTitle title="Video" subtitle="Musikkvideoer, live og promo" />
+            </div>
+            <Box
+              sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+                gap: 3,
+              }}
+            >
+              {/* Featured video (first one, full width on mobile) */}
+              <div className="scroll-reveal scroll-reveal-delay-1" style={{ gridColumn: videos.length > 1 ? undefined : '1 / -1' }}>
+                <VideoCard video={videos[0]} featured />
+              </div>
+              {videos.slice(1).map((video, i) => (
+                <div key={video.id} className={`scroll-reveal scroll-reveal-delay-${(i % 3) + 1}`}>
+                  <VideoCard video={video} />
+                </div>
+              ))}
+            </Box>
           </Box>
 
           {/* Spotify Embed */}

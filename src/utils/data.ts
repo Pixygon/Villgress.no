@@ -1,3 +1,10 @@
+export interface Video {
+  id: string
+  youtubeId: string
+  title: string
+  type: 'Musikkvideo' | 'Live' | 'Promo'
+}
+
 export interface BandMember {
   name: string
   instrument: string
@@ -225,6 +232,39 @@ export const releases: Release[] = [
     tracks: [
       { number: 1, title: 'Elvis' },
     ],
+  },
+]
+
+export const videos: Video[] = [
+  {
+    id: '1',
+    youtubeId: 'ecmiutIXobE',
+    title: 'Elvis',
+    type: 'Musikkvideo',
+  },
+  {
+    id: '2',
+    youtubeId: '0vwbXYuIERY',
+    title: 'Kveld',
+    type: 'Musikkvideo',
+  },
+  {
+    id: '3',
+    youtubeId: '25HjlxYUpQk',
+    title: 'Elektrisk',
+    type: 'Musikkvideo',
+  },
+  {
+    id: '4',
+    youtubeId: 'pSgCx5DhYIQ',
+    title: 'Live på Olsen på Bryn',
+    type: 'Live',
+  },
+  {
+    id: '5',
+    youtubeId: 'P4SwShFCJBg',
+    title: 'Villgress Promo',
+    type: 'Promo',
   },
 ]
 
