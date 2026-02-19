@@ -27,28 +27,34 @@ export interface Release {
 
 export const bandMembers: BandMember[] = [
   {
-    name: 'Ola Villgress',
-    instrument: 'Vokal / Gitar',
-    image: '',
-    bio: 'Frontmann, vokalist og hovedlaten bak Villgress. Ola begynte a skrive sanger pa gutterommet i Hurdal da han var 15, inspirert av alt fra Motorpsycho til Black Sabbath. Hans rue stemme og arlege tekster er bandets sjel.',
+    name: 'Dennis Hemstad',
+    instrument: 'Vokal',
+    image: 'https://pixygontech.b-cdn.net/Projects/Villgress/dennis.jpg',
+    bio: '',
   },
   {
-    name: 'Per Villgress',
-    instrument: 'Gitar',
-    image: '',
-    bio: 'Leadgitarist med en forkjarlighet for tunge riff og melodiske soloer. Per har studert musikk pa NTNU og bringer en teknisk presisjon til bandets live-lyd som far publikum til a miste pusten.',
+    name: 'Biffen Bjørndal',
+    instrument: 'Gitar / Vokal',
+    image: 'https://pixygontech.b-cdn.net/Projects/Villgress/biffen.jpg',
+    bio: '',
   },
   {
-    name: 'Kari Villgress',
-    instrument: 'Bass',
-    image: '',
-    bio: 'Grunnfjellet i bandet. Kari holder takten og grooven gaende med en spillestil som blander punk-energi med progrock-kompleksitet. Tidligere bassist i Oslobandet Jernvilje.',
+    name: 'Roar Kværnsveen',
+    instrument: 'Orgel / Vokal',
+    image: 'https://pixygontech.b-cdn.net/Projects/Villgress/roar.jpg',
+    bio: '',
   },
   {
-    name: 'Lars Villgress',
+    name: 'Anders Halsam Engum',
+    instrument: 'Bass / Vokal',
+    image: 'https://pixygontech.b-cdn.net/Projects/Villgress/anders.jpg',
+    bio: '',
+  },
+  {
+    name: 'Tom Ove Dahl Trane',
     instrument: 'Trommer',
-    image: '',
-    bio: 'Kraftig og presis bak trommesettet. Lars har spilt trommer siden han var 8 ar og har turnert med flere norske band for han fant sitt hjem i Villgress. Hans energi pa scenen er legendarisk.',
+    image: 'https://pixygontech.b-cdn.net/Projects/Villgress/tom.jpg',
+    bio: '',
   },
 ]
 
@@ -158,59 +164,35 @@ export const pastShows: Show[] = [
 export const releases: Release[] = [
   {
     id: '1',
-    title: 'Villgress',
-    year: 2025,
+    title: 'Himmel & Helvete',
+    year: 2015,
     type: 'Album',
-    coverImage: '',
-    spotifyUrl: '#',
-    appleMusicUrl: '#',
-    description: 'Debutalbumet. Ti spor med ren, norsk rock. Fra det rade apningsporet "Hjerteslag" til den episke avslutningen "Tilbake til Jorda" - dette er lyden av et band som har funnet seg selv.',
+    coverImage: 'https://pixygontech.b-cdn.net/Projects/Villgress/himmel&helvete.jpg',
+    spotifyUrl: 'https://open.spotify.com/album/0ejn8GhOanTKLQIesIRW95',
+    description: 'Andre album. Elleve spor med norsk rock som treffer rett i hjertet. Fra den energiske åpningen "Elvis" til den episke avslutningen "Du Og Jeg Og Friheten".',
   },
   {
     id: '2',
-    title: 'Stein og Stal',
-    year: 2024,
-    type: 'EP',
-    coverImage: '',
-    spotifyUrl: '#',
-    description: 'Fire spor som definerer lyden av Villgress. Tunge gitarer, drivende rytmer og tekster som graver dypt. Innspilt live i studio pa tre dager.',
+    title: 'En',
+    year: 2013,
+    type: 'Album',
+    coverImage: 'https://pixygontech.b-cdn.net/Projects/Villgress/en.jpg',
+    spotifyUrl: 'https://open.spotify.com/album/5nby6T0myH94nSMHMyZz2a',
+    description: 'Debutalbumet. Tolv spor som la grunnlaget for Villgress. Fra "Skinn Og Bein" til "Kom Snart Tilbake" - der det hele startet.',
   },
   {
     id: '3',
-    title: 'Forste Frost',
-    year: 2023,
+    title: 'Elvis',
+    year: 2015,
     type: 'Singel',
     coverImage: '',
-    spotifyUrl: '#',
-    description: 'Den aller forste singelen. Der det hele startet. En kald novemberkveld i Hurdal, fanget pa tape.',
-  },
-  {
-    id: '4',
-    title: 'Morke Vann',
-    year: 2025,
-    type: 'Singel',
-    coverImage: '',
-    spotifyUrl: '#',
-    appleMusicUrl: '#',
-    description: 'Siste singel fra albumet. En mork og atmosfarisk ballade om a finne lys i morket. Bandets mest streamede lat hittil.',
-  },
-  {
-    id: '5',
-    title: 'Levende',
-    year: 2024,
-    type: 'Singel',
-    coverImage: '',
-    spotifyUrl: '#',
-    description: 'En eksplosiv singel som fanger energien fra bandets legendariske liveshows. Spilt inn live pa John Dee i Oslo.',
+    spotifyUrl: 'https://open.spotify.com/album/3T9g5BmHMTN0sUuAZV0Bzs',
+    description: 'Singel fra albumet Himmel & Helvete.',
   },
 ]
 
-export const bandBio = `Villgress er et norsk rockeband fra Hurdal, Akershus. Med roter dypt plantet i klassisk rock og en moderne, kompromisslaus edge, leverer bandet kraftig livemusikk med norske tekster som treffer rett i hjertet.
+export const bandBio = `Villgress er et norsk rockeband fra Oslo. Med røtter dypt plantet i klassisk rock og en moderne, kompromissløs edge, leverer bandet kraftig livemusikk med norske tekster som treffer rett i hjertet.
 
-Bandet ble grunnlagt hosten 2022 i en fuktig ovingskjeller i Hurdal sentrum. Det som startet som en gjeng kompiser som jammet pa coverlater, utviklet seg raskt til noe helt eget. Frontmann Ola Villgress begynte a skrive egne tekster - rue, arlige historier om livet pa den norske bygda, om lengsel etter noe storre, og om de stille oyeblikkene mellom stormen.
+Debutalbumet "En" kom i 2013 med tolv spor som la grunnlaget for bandets sound. To år senere fulgte "Himmel & Helvete" (2015), elleve spor som tok bandet videre med enda sterkere låtskriving og råere produksjon.
 
-Gjennombruddet kom vinteren 2023 da singelen "Forste Frost" ble plukket opp av P3 og NRK Urort. Plutselig var det ikke bare venner og familie pa konsertene lengre. Bandet signerte med det uavhengige plateselskapet Fjordlyd Records og gikk rett i studio.
-
-EP-en "Stein og Stal" (2024) sementerte bandets posisjon i den norske rockscenen, og debutalbumet "Villgress" (2025) ble hyllet av kritikerne. Dagbladet ga terningkast 5 og kalte det "det viktigste norske rockdebutalbumet pa ti ar."
-
-Na forbereder bandet seg til sin storste turne hittil, med konserter pa Rockefeller, Garage, Samfundet og Tons of Rock sommeren 2026. Villgress er ikke bare et band - det er en bevegelse.`
+Villgress har gjennom årene bestått av dedikerte musikere med en felles kjærlighet for ærlig, norsk rock. Med Dennis Hemstad på vokal, Biffen Bjørndal på gitar, Roar Kværnsveen på orgel, Anders Halsam Engum på bass og Tom Ove Dahl Trane på trommer leverer bandet en live-opplevelse det er vanskelig å glemme.`

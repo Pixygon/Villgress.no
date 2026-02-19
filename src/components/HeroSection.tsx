@@ -8,9 +8,10 @@ interface HeroSectionProps {
   ctaText?: string
   ctaLink?: string
   compact?: boolean
+  backgroundImage?: string
 }
 
-export default function HeroSection({ title, subtitle, ctaText, ctaLink, compact }: HeroSectionProps) {
+export default function HeroSection({ title, subtitle, ctaText, ctaLink, compact, backgroundImage }: HeroSectionProps) {
   return (
     <Box
       sx={{
@@ -21,8 +22,25 @@ export default function HeroSection({ title, subtitle, ctaText, ctaLink, compact
         justifyContent: 'center',
         backgroundColor: '#0a0a0a',
         overflow: 'hidden',
+        ...(backgroundImage && {
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }),
       }}
     >
+      {/* Dark overlay for background images */}
+      {backgroundImage && (
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            backgroundColor: 'rgba(0,0,0,0.55)',
+            zIndex: 0,
+          }}
+        />
+      )}
+
       {/* Animated background glow */}
       <Box
         sx={{

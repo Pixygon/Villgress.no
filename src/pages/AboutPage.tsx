@@ -14,6 +14,7 @@ export default function AboutPage() {
         title="Om Oss"
         subtitle="Historien bak Villgress"
         compact
+        backgroundImage="https://pixygontech.b-cdn.net/Projects/Villgress/villgress.jpg"
       />
 
       <Box sx={{ py: 10 }}>
@@ -31,12 +32,12 @@ export default function AboutPage() {
 
           {/* Band Members */}
           <div className="scroll-reveal">
-            <SectionTitle title="Medlemmer" subtitle="De fire som utgjør Villgress" />
+            <SectionTitle title="Medlemmer" subtitle="De fem som utgjør Villgress" />
           </div>
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr 1fr' },
+              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(5, 1fr)' },
               gap: 3,
               mb: 10,
             }}
